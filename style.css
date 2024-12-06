@@ -1,0 +1,158 @@
+* {
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+}
+
+html {
+  scroll-snap-type: y mandatory;
+}
+@media screen and (max-width: 767px) {
+  .head {
+    min-width: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    position: fixed;
+    z-index: 300;
+    background-color: transparent;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  #tt {
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+    position: absolute;
+    left: 16.5%;
+    top: 31%;
+    background-color: transparent;
+  }
+
+  .menu {
+    background-color: transparent;
+  }
+  .menu a {
+    background-color: transparent;
+  }
+  .menu img {
+    max-width: 25px;
+    position: relative;
+    left: 7%;
+    background-color: transparent;
+  }
+
+  .logo img {
+    max-width: 60px;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: transparent;
+    background: none;
+    opacity: 1;
+  }
+
+  .user img {
+    max-width: 32px;
+    position: absolute;
+    top: 19%;
+    left: 88%;
+    background-color: transparent;
+  }
+
+  .search img {
+    max-width: 32px;
+    position: absolute;
+    top: 19%;
+    left: 75%;
+    background-color: transparent;
+  }
+
+  .bg-video {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  .bg-video video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+  }
+
+  .section {
+    margin: 0px auto;
+    scroll-snap-align: start;
+  }
+
+  .nivideo {
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    position: absolute;
+    top: 30%;
+    color: white;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    background-color: transparent;
+  }
+
+  .nivideo button {
+    padding: 10px;
+    background-color: RGB(77, 198, 244);
+    border: none;
+    font-size: 15px;
+  }
+
+  .scroll {
+    opacity: 0;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: white;
+    transition: opacity 0.3s ease;
+  }
+
+  .mensagem {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  .flechas {
+    display: block;
+    font-size: 2rem;
+    animation: bounce 1s infinite;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes bounce {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(10px);
+    }
+  }
+
+  .carros {
+    margin-top: 15px;
+    text-align: center;
+  }
+}
