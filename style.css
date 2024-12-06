@@ -154,5 +154,33 @@ html {
   .carros {
     margin-top: 15px;
     text-align: center;
+    height: 100vh;
+  }
+
+  .swiper {
+    margin-top: 100px;
+  }
+
+  .swiper-slide img {
+    max-width: 350px;
+  }
+
+  .swiper-slide p {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 30px;
+    font-weight: 1000;
+  }
+
+  .swiper-slide button {
+    padding: 10px;
+    font-size: 15px;
+    background-color: RGB(41, 70, 103);
+    color: white;
+    border-radius: 30px;
+  }
+
+  #polo {
+    background-color: RGB(155, 52, 34);
   }
 }
