@@ -25,17 +25,19 @@
     <header>
       <nav class="head">
         <div class="menu">
-          <a href=""><img src="images/fotos/botaoMenu.svg" alt="Menu" /></a>
-          <a href="" id="tt">Menu</a>
+          <button class="menu" id="menu">
+            <img src="images/fotos/menu (1).svg" alt="" />
+            <p>MENU</p>
+          </button>
         </div>
         <div class="logo">
           <img src="images/fotos/logoVolks.svg" alt="logotipo" />
         </div>
         <div class="user">
-          <img src="images/fotos/botaoUser.svg" alt="Login" />
+          <img src="images/fotos/user.svg" alt="Login" />
         </div>
         <div class="search">
-          <img src="images/fotos/botaoLupa.svg" alt="Procurar" />
+          <img src="images/fotos/LUPA.svg" alt="Procurar" />
         </div>
       </nav>
     </header>
@@ -62,7 +64,7 @@
     </main>
 
     <main class="section">
-      <div class="carros">
+      <div class="carros" id="carros">
         <h1>MODELOS:</h1>
         <p><a href="">Selecione modelos para configurar!</a></p>
         <div class="swiper">
@@ -71,14 +73,44 @@
               <img src="images/carrossell/T-CROSS.svg" alt="" />
               <p>T-CROSS</p>
               <button>CONFIGURAR</button>
+              <a href="">Mais informações</a>
             </div>
             <div class="swiper-slide">
               <img src="images/carrossell/POLO.svg" alt="" />
               <p>POLO</p>
               <button id="polo">CONFIGURAR</button>
+              <a href="">Mais informações</a>
             </div>
-            <div class="swiper-slide">Slide 3</div>
-            ...
+            <div class="swiper-slide">
+              <img src="images/carrossell/NIVUS.svg" alt="" />
+              <p>NIVUS</p>
+              <button id="nivus">CONFIGURAR</button>
+              <a href="">Mais informações</a>
+            </div>
+            <div class="swiper-slide">
+              <img src="images/carrossell/VIRTUS.svg" alt="" />
+              <p>VIRTUS</p>
+              <button id="virtus">CONFIGURAR</button>
+              <a href="">Mais informações</a>
+            </div>
+            <div class="swiper-slide">
+              <img src="images/carrossell/JETTA.svg" alt="" />
+              <p>JETTA</p>
+              <button id="jetta">CONFIGURAR</button>
+              <a href="">Mais informações</a>
+            </div>
+            <div class="swiper-slide">
+              <img src="images/carrossell/TIGUAN.svg" alt="" />
+              <p>TIGUAN</p>
+              <button id="tiguan">CONFIGURAR</button>
+              <a href="">Mais informações</a>
+            </div>
+            <div class="swiper-slide">
+              <img src="images/carrossell/AMAROK.svg" alt="" />
+              <p>AMAROK</p>
+              <button id="amarok">CONFIGURAR</button>
+              <a href="">Mais informações</a>
+            </div>
           </div>
           <div class="swiper-pagination"></div>
 
@@ -89,6 +121,23 @@
         </div>
       </div>
     </main>
+
+    <nav>
+      <div class="modal" id="modal">
+        <button class="fechar">&times; FECHAR</button>
+        <ul>
+          <li><button>Modelos e Configurador &RightArrow;</button></li>
+          <li><button>Ofertas</button></li>
+          <li><button>Serviços,Peças e Acessórios &RightArrow;</button></li>
+          <li><button>Vendas e Finanças &RightArrow;</button></li>
+          <li><button>Marca e Experiência &RightArrow;</button></li>
+          <li><button>Encontrar Concessionárias</button></li>
+          <li><button>Comparar Modelos</button></li>
+        </ul>
+
+        <p>Top links</p>
+      </div>
+    </nav>
 
     <script src="script/app.js"></script>
     <script src="script/swip.js"></script>

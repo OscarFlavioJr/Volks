@@ -21,7 +21,7 @@ html {
 
   #tt {
     text-decoration: none;
-    color: white;
+    color: #4cc7f4;
     font-size: 12px;
     position: absolute;
     left: 16.5%;
@@ -29,17 +29,28 @@ html {
     background-color: transparent;
   }
 
-  .menu {
+  .menu button {
+    border: none;
     background-color: transparent;
   }
-  .menu a {
-    background-color: transparent;
+  .menu p {
+    position: relative;
+    left: 75px;
+    top: -30px;
+    font-size: 15px;
+    color: #294666;
   }
   .menu img {
     max-width: 25px;
     position: relative;
-    left: 7%;
+    left: 57%;
     background-color: transparent;
+  }
+
+  .logo {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
   }
 
   .logo img {
@@ -48,9 +59,6 @@ html {
     top: 55%;
     left: 50%;
     transform: translateX(-50%);
-    background-color: transparent;
-    background: none;
-    opacity: 1;
   }
 
   .user img {
@@ -161,6 +169,10 @@ html {
     margin-top: 100px;
   }
 
+  .swiper-slide {
+    height: 400px;
+  }
+
   .swiper-slide img {
     max-width: 350px;
   }
@@ -180,7 +192,71 @@ html {
     border-radius: 30px;
   }
 
+  .swiper-slide a {
+    position: absolute;
+    top: 84.5%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
   #polo {
     background-color: RGB(155, 52, 34);
+  }
+
+  #jetta {
+    background-color: RGB(155, 52, 34);
+  }
+
+  #nivus {
+    background-color: RGB(220, 218, 211);
+    color: black;
+  }
+
+  #amarok {
+    background-color: gray;
+    color: black;
+  }
+
+  .modal {
+    background-color: #4cc7f4;
+    position: fixed;
+    top: 0;
+    left: -500px;
+    min-height: 100%;
+    min-width: 100%;
+    z-index: 400;
+    transition: left 0.3s ease;
+  }
+
+  .fechar {
+    position: relative;
+    top: 25px;
+    left: 20px;
+    font-size: 15px;
+    background-color: transparent;
+    border: none;
+  }
+
+  .modal ul {
+    margin-top: 70px;
+  }
+
+  .modal li {
+    padding: 25px;
+    font-size: 20px;
+  }
+
+  .modal li,
+  button {
+    font-size: 20px;
+    background-color: transparent;
+    border: none;
+  }
+
+  .modal p {
+    position: relative;
+    left: 25px;
+    top: 50px;
+    font-size: 15px;
   }
 }
