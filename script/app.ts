@@ -90,12 +90,10 @@ document.addEventListener("DOMContentLoaded", () => {
   if (modelos && voltar && carros) {
     carros.onclick = () => {
       modelos.style.left = "0";
-      console.log("Menu modelos aberto.");
     };
 
     voltar.onclick = () => {
       modelos.style.left = "-500px";
-      console.log("Menu modelos fechado.");
     };
   } else {
     console.error(
@@ -103,3 +101,28 @@ document.addEventListener("DOMContentLoaded", () => {
     );
   }
 });
+
+const searchInput = document.getElementById("search-input") as HTMLInputElement;
+const searchButton = document.getElementById(
+  "search-button"
+) as HTMLButtonElement;
+const resultParagraph = document.getElementById(
+  "result"
+) as HTMLParagraphElement;
+
+function handleSearch(): void {
+  const query = searchInput.value.trim();
+
+  if (!query) {
+    resultParagraph.textContent = "Por favor, insira um termo para pesquisar.";
+    resultParagraph.style.color = "red";
+    return;
+  }
+
+  resultParagraph.textContent = `Você pesquisou: "${query}"`;
+  resultParagraph.style.color = "green";
+
+  console.log(`Buscando por: ${query}`);
+}
+
+searchButton.addEventListener("click", handleSearch);

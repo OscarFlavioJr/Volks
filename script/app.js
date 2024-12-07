@@ -74,14 +74,27 @@ document.addEventListener("DOMContentLoaded", function () {
     if (modelos && voltar && carros) {
         carros.onclick = function () {
             modelos.style.left = "0";
-            console.log("Menu modelos aberto.");
         };
         voltar.onclick = function () {
             modelos.style.left = "-500px";
-            console.log("Menu modelos fechado.");
         };
     }
     else {
         console.error("Algum elemento necessário para o menu de modelos não foi encontrado no DOM.");
     }
 });
+var searchInput = document.getElementById("search-input");
+var searchButton = document.getElementById("search-button");
+var resultParagraph = document.getElementById("result");
+function handleSearch() {
+    var query = searchInput.value.trim();
+    if (!query) {
+        resultParagraph.textContent = "Por favor, insira um termo para pesquisar.";
+        resultParagraph.style.color = "red";
+        return;
+    }
+    resultParagraph.textContent = "Voc\u00EA pesquisou: \"".concat(query, "\"");
+    resultParagraph.style.color = "green";
+    console.log("Buscando por: ".concat(query));
+}
+searchButton.addEventListener("click", handleSearch);
