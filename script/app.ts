@@ -1,13 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
   setTimeout(() => {
-    const messageContainer = document.getElementById(
-      "scroll"
-    ) as HTMLElement | null;
-
-    if (messageContainer) {
-      messageContainer.style.opacity = "1";
+    const scrollElement = document.getElementById("scroll");
+    if (scrollElement) {
+      scrollElement.style.opacity = "1";
     } else {
-      console.error("Elemento com id 'scroll' não foi encontrado.");
+      console.error("Elemento com ID 'scroll' não encontrado.");
     }
   }, 3000);
 
@@ -15,23 +12,94 @@ document.addEventListener("DOMContentLoaded", () => {
     const nivideoElement = document.querySelector(
       ".nivideo"
     ) as HTMLElement | null;
-
     if (nivideoElement) {
       nivideoElement.style.opacity = "1";
     } else {
-      console.error("Elemento com classe 'nivideo' não foi encontrado.");
+      console.error("Elemento com classe 'nivideo' não encontrado.");
     }
   }, 5200);
 
   setTimeout(() => {
-    const nivideoElement = document.querySelector(
-      ".head"
-    ) as HTMLElement | null;
-
-    if (nivideoElement) {
-      nivideoElement.style.opacity = "1";
+    const headElement = document.querySelector(".head") as HTMLElement | null;
+    if (headElement) {
+      headElement.style.opacity = "1";
     } else {
-      console.error("Elemento com classe 'nivideo' não foi encontrado.");
+      console.error("Elemento com classe 'head' não encontrado.");
     }
   }, 5500);
+
+  const logoElement = document.querySelector<HTMLElement>(".logo");
+  const modelosSection = document.getElementById("carros");
+
+  if (!logoElement || !modelosSection) {
+    console.error(
+      "Elementos necessários para controle do logotipo não foram encontrados."
+    );
+    return;
+  }
+
+  let logoHidden = false;
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          if (!logoHidden) {
+            logoElement.style.visibility = "hidden";
+            logoElement.style.opacity = "0";
+            logoHidden = true;
+          }
+        } else {
+          if (logoHidden) {
+            logoElement.style.visibility = "hidden";
+            logoElement.style.opacity = "0";
+          }
+        }
+      });
+    },
+    {
+      root: null,
+      threshold: 0.5,
+    }
+  );
+
+  observer.observe(modelosSection);
+
+  const botao = document.getElementById("menu") as HTMLButtonElement;
+  const modal = document.getElementById("modal") as HTMLDivElement;
+  const fechar = document.querySelector(".fechar") as HTMLButtonElement;
+
+  if (botao && modal && fechar) {
+    botao.onclick = () => {
+      modal.style.left = "0";
+    };
+
+    fechar.onclick = () => {
+      modal.style.left = "-500px";
+    };
+  } else {
+    console.error(
+      "Elementos necessários para o menu lateral não foram encontrados."
+    );
+  }
+
+  const modelos = document.getElementById("modelos") as HTMLDivElement | null;
+  const voltar = document.querySelector(".voltar") as HTMLButtonElement | null;
+  const carros = document.querySelector(".mc") as HTMLButtonElement | null;
+
+  if (modelos && voltar && carros) {
+    carros.onclick = () => {
+      modelos.style.left = "0";
+      console.log("Menu modelos aberto.");
+    };
+
+    voltar.onclick = () => {
+      modelos.style.left = "-500px";
+      console.log("Menu modelos fechado.");
+    };
+  } else {
+    console.error(
+      "Algum elemento necessário para o menu de modelos não foi encontrado no DOM."
+    );
+  }
 });
