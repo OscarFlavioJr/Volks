@@ -10,5 +10,17 @@ document.addEventListener("DOMContentLoaded", () => {
       el: ".swiper-scrollbar",
       draggable: true,
     },
+    slidesPerView: "auto",
+    spaceBetween: 20,
+    breakpoints: {
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 15,
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
+    },
   });
 });
